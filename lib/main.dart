@@ -1,24 +1,48 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.blueGrey,
-      appBar: AppBar(
-        title: Text('dicee'),
-        backgroundColor: Colors.blue,
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.redAccent,
+        appBar: AppBar(
+          title: Text('Dicee'),
+          backgroundColor: Colors.red,
+        ),
+        body: Dicepage(),
       ),
-      body: Dicepage(),
     ),
-  ),);
+  );
 }
 
 class Dicepage extends StatelessWidget {
-  const Dicepage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset('images/dice1.png'),
+              ),
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset('images/dice1.png'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
-
