@@ -25,8 +25,8 @@ class Dicepage extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
+              child: TextButton(
+                onPressed: () {},
                 child: Image.asset('images/dice1.png'),
               ),
             ),
@@ -35,10 +35,8 @@ class Dicepage extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Image.asset('images/dice1.png'),
-              ),
+              child: TextButton(
+                  onPressed: () {}, child: Image.asset('images/dice1.png'),),
             ),
           ],
         ),
